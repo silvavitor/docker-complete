@@ -1,0 +1,12 @@
+node:
+
+docker build -t docker_assignment1:1 ./node-app/.
+docker run -p 3000:3000 -d --rm --name docker_assignment_1_container docker_assignment1:1
+docker stop docker_assignment_1_container
+docker rmi docker_assignment1:1
+
+python:
+
+docker build -t docker_assignment_1_python:1 ./python-app/.
+docker run -it --rm --name docker_assignment1_python docker_assignment_1_python:1
+docker rmi docker_assignment_1_python:1
